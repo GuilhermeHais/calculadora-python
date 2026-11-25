@@ -3,7 +3,7 @@ cores = {'Limpa': '\033[m',
          'Vermelho': '\033[1;31m',
          'Verde': '\033[1;32m'}
 
-operacao = input('Insira qual operação deseja realizar (+; -; *; /; r; %; ^): ')
+operacao = input('Insira qual operação deseja realizar (+; -; *; /; r; %; ^; **): ')
 num1 = float(input('Digite um número: '))
 num2 = float(input('Digite outro número: '))
 
@@ -23,7 +23,7 @@ elif operacao == '/':
     else:
         print('{} / {} = {}{}{}'.format(num1, num2, cores['Verde'], num1 / num2, cores['Limpa']))
 # Potência
-elif operacao == '^':
+elif operacao == '^' or operacao == '**':
     if num1 == 0 and num2 < 0:
         print('{}O número zero não pode ser elevado a um número negativo!{}'.format(cores['Vermelho'], cores['Limpa']))
     else:
